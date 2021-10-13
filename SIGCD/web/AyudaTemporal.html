@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>       
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+        <script src="JavaScript/VentanaPrincipal.js"></script>
+        <script src="JavaScript/AyudaTemporal.js"></script>
+        <script src="JavaScript/web.js"></script>
+    </head>
+
+    <body>
+        <div id="opciones" style="margin-left: 30%; margin-top: 5%">
+            <button style="background-color: #007bff; width:30%" onclick="mostrar()"><b>LLenar formulario</b></button>
+            <button style="background-color: #007bff; width:30%"  onclick="descarga()"><b>Descargar formulario</b></button>
+        </div>
+        <div id="principal" class="container" style="width:100%; display: none;" >
+            <form id="formulario">
+                <div class="form-group">
+                    <label>cedula del solicitante</label>
+                    <input type="text" class="form-control" id="cedula" placeholder="cedula" required>
+                </div>
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+                </div>
+                <div class="form-group">
+                    <label>Primer apellido</label>
+                    <input type="text" class="form-control" id="pApellido" placeholder="Primer apellido" required>
+                </div>
+                <div class="form-group">
+                    <label>Segundo apellido</label>
+                    <input type="text" class="form-control" id="sApellido" placeholder="Segundo apellido" required>
+                </div>
+                <div class="form-group">
+                    <label>Telefono habitacion</label>
+                    <input type="text" class="form-control" id="tHabitacion" placeholder="2200000">
+                </div>
+                <div class="form-group">
+                    <label>Telefono Celular</label>
+                    <input type="number" class="form-control" id="tCelular" placeholder="8800000" required>
+                </div>
+                <label><b>Dirección de residencia</b></label>
+                <div class="form-group">
+                    <label>Seleccione el distrito</label>
+                    <select class="form-control" id="distritoSelect" onClick="cargar_Barrios()" required></select>
+                </div>
+                <div class="form-group">
+                    <label>Seleccione el barrio</label>
+                    <select class="form-control" id="barrioSelect" required ></select>
+                    </div>
+                <div class="form-group">
+                    <label>Ingrese la dirección por señas de su residencia </label>
+                    <input type="text" class="form-control" id="direccionInput" placeholder="Ingrese la dirección por señas de su residencia">
+                </div>
+                <div class="form-group">
+                    <label>Motivo por el que solicita la ayuda</label>
+                    <textarea class="form-control" id="mAyuda" rows="5" required></textarea>
+                </div>
+                <button onclick="guardar()" id="enviarSolicitudButton" class="btn btn-primary">
+                    Enviar mi solicitud
+                </button>
+            </form>
+        </div>
+        <div id="resultados" style="margin-left: 30%; margin-top: 5%">
+        </div>
+    </body>
+</html>
