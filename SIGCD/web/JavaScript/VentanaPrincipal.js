@@ -38,3 +38,25 @@ function cargarVentanaPrincipal() {
 }
 
 $(cargarVentanaPrincipal);
+
+function ver(x){
+    var menu;
+    x == 1 ? (
+        menu = document.getElementById("opciones"),
+        menu.style.display = menu.style.display == "none" ? "block" : "none"
+    ) : (
+        menu = document.getElementById("opciones2"),
+        menu.style.display = menu.style.display == "none" ? "block" : "none"
+    );
+}
+
+function requisitos(x){
+    var datos = document.getElementById("informacion");
+    var txt;
+    datos.style.display = datos.style.display == "none" ? "block" : "none";
+    txt = "<p>Requisitos:</p>";
+    datos.innerHTML = txt;
+    
+}
+
+
