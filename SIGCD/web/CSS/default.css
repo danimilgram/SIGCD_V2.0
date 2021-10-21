@@ -1,11 +1,45 @@
 
-
-
-#informacion{
-    border: black solid 2px; 
-    background-color: tomato;
-    color : black;
-    margin-left: 25%;
-    margin-right: 25%;
+#informacion,#informacion2{
+    margin-top: 2px;
+    padding-right: 2px;
+    text-align: left;
 }
 
+#mask {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+
+#info{
+    background-color: darksalmon;
+    border: black 2px solid;
+    padding: 2%;
+    border-radius: 20px;
+}
+
+#animacion {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border: 10px solid #eee;
+  border-top: 10px solid red;
+  border-radius: 50%;
+  animation-name: girar;
+  animation-duration: 2s;
+  margin-top: 40%;
+  margin-left: 50%;
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

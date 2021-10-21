@@ -19,31 +19,48 @@ and open the template in the editor.
         <link href="CSS/default.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <h1 style="justify-content: center; display: flex"> Bienvenido a la pagina de ayudas</h1>
+        <h1 style=" display: flex"> Bienvenido a la pagina de ayudas</h1>
         <br/>
-        <div style="justify-content: center; display: flex"> 
-            <div style="width:20%">
-                <button  style="background-color: #007bff" onclick="ver(1)">
-                    <b>Ayuda Temporal</b>
-                </button>
-                <div id="opciones" style="display : none">
-                    <a class="dropdown-item" href="AyudaTemporal.html">Formulario</a>
-                    <a class="dropdown-item" type="buttom" onclick="requisitos(1)">Requisitos</a>
-                </div>
+        <div style="justify-content: flex-end; display: flex; margin-left: 2%"> 
+            <div style="width: 50%;">
+                <div style="justify-content: space-around; display: flex">
+                    <div style="width:35%">
+                        <button  style="background-color: #007bff" onclick="ver(1)">
+                            <b>Ayuda Temporal</b>
+                        </button>
+                        <div id="opciones" style="display : none;">
+                            <a class="dropdown-item" href="AyudaTemporal.html">Formulario</a>
+                            <a class="dropdown-item" type="buttom" onclick="requisitos1()">Requisitos</a>
+                        </div>
+                    </div>
+                    <div style="width:30%;">
+                        <button  style="background-color: #007bff" onclick="ver(2)">
+                            <b>Beca Municipal</b>
+                        </button>
+                        <div id="opciones2" style="display : none">
+                            <a class="dropdown-item" href="BecaMunicipal.html">Formulario</a>
+                            <a class="dropdown-item" type="buttom" onclick="requisitos2()">Requisitos</a>
+                        </div>
+                        <br/>
+                    </div>
+                </div>  
+                <div id="informacion" style="display: none"></div>
+                <div id="informacion2" style="display: none"></div>
             </div>
-            <div style="width:20%">
-                <button  style="background-color: #007bff" onclick="ver(2)">
-                    <b>Beca Municipal</b>
-                </button>
-                <div id="opciones2" style="display : none">
-                    <a class="dropdown-item" href="BecaMunicipal.html">Formulario</a>
-                    <a class="dropdown-item" type="buttom" onclick="requisitos(2)">Requisitos</a>
-                </div>
+            <br/>
+            <div id="info">
+                <p><b>Requisitos Generales:</b></p>
+                <p>-Las solicitudes deben presentarse de manera ordenada y con requisitos completos,
+                    caso contrario no se reciben</p>
+                <p>-Los dias de entrega de solicitud son de lunes a viernes</p>
+                <p>-No aplica la ayuda si ha recibido ayuda por las mismas situaciones por parte de la 
+                    municipalidad en los ultimos 12 meses</p>
+                <p>-Despues de la entrega de la solicitud, la trabajadora social lo estara llamando para 
+                    coordinar una visita y hacer un estudio socieconomico</p>
+                <p>El otorgamiento de la ayuda queda sujeta al resultado del estudio y presupuesto de la 
+                    municipal en ese momento</p>
+                <p>Tendra un mes apartir de la aprobación para retirar la ayuda en caso contrario no tendra enfecto</p>
             </div>
-        </div>
-        <br/>
-        <div id="informacion" style="display: none ">
-
         </div>
     </body>
 </html>

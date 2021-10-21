@@ -22,7 +22,7 @@ function mostrar(){
 function descarga() {
     var link = document.createElement("a");
     link.download = "Formulario_Ayuda_Temporal.pdf";
-    link.href = "https://www.filemail.com/d/zdalsebgwkwyayt";
+    link.href = "https://www.filemail.com/d/gqziwaosasvjoti";
     link.click();
 }
 
@@ -142,10 +142,12 @@ function validaciones(){
 
 //Guardar datos
 function guardar(){
+    var mascara = document.getElementById("mask");
     var ayuda;
     validaciones() ? (
         ayuda = JSON.stringify(solicitud()),
         document.getElementById("formulario").reset(),
+        mascara.style.display = "block",
         postJSON(`2/${ayuda}`,mensaje)
     ) : console.log("Faltan Datos");
 }
@@ -153,8 +155,10 @@ function guardar(){
 function mensaje(dato){
     mostrar();
     var mensaje = document.getElementById("resultados");
+    var mascara = document.getElementById("mask");
     var txt;
     dato !== -1 ? txt = `<p><b>Solicitud #${dato} guarde este dato para consultar estado</b><p>` : 
             txt = "<p><b>Error al enviar formulario por favor vuelva a intentarlo o descargue el formulario</b><p>";
     mensaje.innerHTML = txt;
+    mascara.style.display = "none";
 }
