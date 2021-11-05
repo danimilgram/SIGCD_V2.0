@@ -1,5 +1,6 @@
 package Logic.Formulario;
 
+import Logic.Persona.Direccion;
 import Logic.Persona.Estudiante;
 import java.sql.Timestamp;
 import com.google.gson.GsonBuilder;
@@ -13,8 +14,9 @@ public class BecaMunicipal extends Formulario implements Serializable{
     public BecaMunicipal() {
     }
 
-    public BecaMunicipal(int IdFormulario, int estado, Timestamp fechaCreacion, Estudiante estudiante) {
-        super(IdFormulario, estado, fechaCreacion);
+    public BecaMunicipal(int IdFormulario, int estado, Timestamp fechaCreacion,
+            Estudiante estudiante, String celular, String telefono, Direccion direccion) {
+        super(IdFormulario, estado, fechaCreacion,celular,telefono,direccion);
         this.estudiante = estudiante;
     }
 

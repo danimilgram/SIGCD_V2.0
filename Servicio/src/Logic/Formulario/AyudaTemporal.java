@@ -1,7 +1,8 @@
 package Logic.Formulario;
 
 
-import Logic.Persona.Solicitante;
+import Logic.Persona.Direccion;
+import Logic.Persona.Persona;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.io.Serializable;
@@ -9,23 +10,24 @@ import java.sql.Timestamp;
 
 public class AyudaTemporal extends Formulario implements Serializable{
 
-    private Solicitante solicitante;
+    private Persona solicitante;
     private String motivoAyuda;
 
     public AyudaTemporal() {
     }
 
-    public AyudaTemporal(int IdFormulario, int estado, Timestamp fechaCreacion, Solicitante solicitante, String motivoAyuda) {
-        super(IdFormulario, estado, fechaCreacion);
+    public AyudaTemporal(int IdFormulario, int estado, Timestamp fechaCreacion, Persona solicitante, String motivoAyuda,
+            String celular, String telefono, Direccion direccion) {
+        super(IdFormulario, estado, fechaCreacion,celular,telefono,direccion);
         this.solicitante = solicitante;
         this.motivoAyuda = motivoAyuda;
     }
 
-    public Solicitante getSolicitante() {
+    public Persona getSolicitante() {
         return solicitante;
     }
 
-    public void setSolicitante(Solicitante solicitante) {
+    public void setSolicitante(Persona solicitante) {
         this.solicitante = solicitante;
     }
 

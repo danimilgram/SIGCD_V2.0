@@ -8,12 +8,12 @@ import java.util.Optional;
 
 public class DireccionDao {
 
-    public boolean addDireccion(String id, Direccion d) {
+    public boolean addDireccion(int id, Direccion d) {
         try {
             String sql = "insert into direccion (idDireccion,distrito,barrio,direccionExacta)"
                     + " values(?,?,?,?)";
             PreparedStatement stm = Database.instance().prepareStatement(sql);
-            stm.setString(1, id);
+            stm.setInt(1, id);
             stm.setString(2, d.getDistrito());
             stm.setString(3, d.getBarrio());
             stm.setString(4, d.getDireccionExacta());
@@ -24,10 +24,10 @@ public class DireccionDao {
         }
     }
 
-    public Optional<Direccion> getDireccion(String id) throws SQLException {
+    public Optional<Direccion> getDireccion(int id) throws SQLException {
         String sql = "select * from direccion where idDireccion = ?";
         PreparedStatement stm = Database.instance().prepareStatement(sql);
-        stm.setString(1, id);
+        stm.setInt(1, id);
         ResultSet rs = Database.instance().executeQuery(stm);
         Optional<Direccion> d = Optional.ofNullable(null);
         if (rs.next()) {
