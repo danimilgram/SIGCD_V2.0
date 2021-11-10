@@ -110,7 +110,7 @@ function mensaje(dato){
     var mensaje = document.getElementById("resultados");
     var mascara = document.getElementById("mask");
     var txt;
-    dato !== -1 ? txt = `<p><b>Solicitud #${dato} guarde este dato para consultar estado</b><p>` : 
+    dato !== -1 ? txt = `<p><b>Solicitud #${dato} Guarde este dato para consultar estado</b><p>` : 
             txt = "<p><b>Error al enviar formulario por favor vuelva a intentarlo o descargue el formulario</b><p>";
     mensaje.innerHTML = txt;
     mascara.style.display= "none";

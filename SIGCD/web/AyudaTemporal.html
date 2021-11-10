@@ -21,14 +21,14 @@ and open the template in the editor.
 
     <body>
         <div id="opciones" style="margin-left: 30%; margin-top: 5%">
-            <button style="background-color: #007bff; width:30%" onclick="mostrar()"><b>LLenar formulario</b></button>
-            <button style="background-color: #007bff; width:30%"  onclick="descarga()"><b>Descargar formulario</b></button>
+            <button type="button" class="btn btn-primary" style="background-color: #007bff; width:30%" onclick="mostrar()"><b>Llenar formulario</b></button>
+            <button type="button" class="btn btn-primary" style="background-color: #007bff; width:30%"  onclick="descarga()"><b>Descargar formulario</b></button>
         </div>
         <div id="principal" class="container" style="width:100%; display: none;" >
             <form id="formulario">
                 <div class="form-group">
-                    <label>cedula del solicitante</label>
-                    <input type="text" class="form-control" id="cedula" placeholder="cedula" required>
+                    <label>Cédula del solicitante</label>
+                    <input type="text" class="form-control" id="cedula" placeholder="Cédula" required>
                 </div>
                 <div class="form-group">
                     <label>Nombre</label>
@@ -43,11 +43,11 @@ and open the template in the editor.
                     <input type="text" class="form-control" id="sApellido" placeholder="Segundo apellido" required>
                 </div>
                 <div class="form-group">
-                    <label>Telefono habitacion</label>
+                    <label>Teléfono habitación</label>
                     <input type="text" class="form-control" id="tHabitacion" placeholder="2200000">
                 </div>
                 <div class="form-group">
-                    <label>Telefono Celular</label>
+                    <label>Teléfono Celular</label>
                     <input type="number" class="form-control" id="tCelular" placeholder="8800000" required>
                 </div>
                 <label><b>Dirección de residencia</b></label>
